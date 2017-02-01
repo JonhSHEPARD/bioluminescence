@@ -23,10 +23,10 @@
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="introduction.html">Introduction</a></li>
+            <li class="active"><a href="introduction.html">Introduction</a></li>
             <li><a href="bioluminescence.html">Bioluminescence</a></li>
             <li><a href="dinoflagelles.html">Dinoflagellés</a></li>
-            <li class="active"><a href="dev_durable.html">Développement Durable</a></li>
+            <li><a href="dev_durable.html">Développement Durable</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><a href="lexique.html">Lexique</a></li>
@@ -35,10 +35,10 @@
 
         <ul id="nav-mobile" class="side-nav">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="introduction.html">Introduction</a></li>
+            <li class="active"><a href="introduction.html">Introduction</a></li>
             <li><a href="bioluminescence.html">Bioluminescence</a></li>
             <li><a href="dinoflagelles.html">Dinoflagellés</a></li>
-            <li class="active"><a href="dev_durable.html">Développement Durable</a></li>
+            <li><a href="dev_durable.html">Développement Durable</a></li>
             <li><a href="lexique.html">Lexique</a></li>
             <li><a href="bibliographie.html">Bibliographie</a></li>
         </ul>
@@ -47,20 +47,16 @@
     </div>
 </nav>
 <main>
+
     <div class="container">
         <br>
 
         <div class="row">
             <div class="section no-pad-bot scrollspy" id="top">
-                <h2 class="header center teal-text">Développement Durable</h2>
+                <h2 class="header center teal-text">Introduction</h2>
                 <div class="col s12">
-                    <div class="col s6 left-align">
-                        <a href="dinoflagelles.html" class="btn teal">
-                            <i class="fa fa-arrow-left"></i> Précedent
-                        </a>
-                    </div>
-                    <div class="col s6 right-align">
-                        <a href="lexique.html" class="btn teal">
+                    <div class="col s6 offset-s6 right-align">
+                        <a href="bioluminescence.html" class="btn teal">
                             Suivant <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -74,7 +70,27 @@
         <div class="row">
             <div class="hide-on-small-only col m3 l2 offset-m9 offset-l10">
                 <ul class="section table-of-contents pinned">
+                    <li><a href="#top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Haut de page</a></li>
+                    <br>
+                    <li><a href="#demarche">Notre démarche</a></li>
                 </ul>
+            </div>
+
+            <div class="section">
+                <!--   Icon Section   -->
+                <div class="col s12 m9 l10">
+                    <div id="video" class="icon-block">
+                        <div class="video-container">
+                            <div id="muteYouTubeVideoPlayer"></div>
+                        </div>
+                    </div>
+                    <p>
+                        Nous pouvons voir sur la vidéo ci-dessus la présence d'une lumière émise lors des mouvements des
+                        vagues, c'est cela que nous avons cherchés à étudier.
+                    </p>
+                    <br>
+                    <br>
+                </div>
             </div>
 
             <div class="section">
@@ -82,22 +98,44 @@
                 <div class="row">
                     <div class="col s12 m9 l10">
                         <div class="icon-block">
-                            <h2 class="center teal-text"><i class="material-icons">info_outline</i></h2>
-                            <h5 class="center">Lorem Ipsum</h5>
-
-                            <p class="light center">
-                            </p>
+                            <h2 class="center teal-text"><i class="fa fa-list" aria-hidden="true"></i></h2>
+                            <h5 class="center scrollspy" id="demarche">Notre démarche</h5>
 
                             <br>
 
-                            <p class="light center">
-                            </p>
+                            <ul class="browser-default light">
+                                <li>
+                                    <p>
+                                        Dans un premier temps, nous nous sommes demandés l'origine de la lumière visible
+                                        dans la vidéo.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Puis après avoir identifié la bioluminescence, nous avons recherchés quels était
+                                        les organismes émetteurs de cette lumière.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Enfin nous nous sommes demandés dans quel cadre nous pouvions utiliser cette
+                                        forme de lumière afin de réduire l'éclairage artificiel et dans un cadre de
+                                        développement durable.
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <br>
+            <br>
         </div>
     </div>
+
+    <br>
+    <br>
+
 </main>
 
 <footer class="page-footer teal">
@@ -126,6 +164,31 @@
             $('.scrollspy').scrollSpy();
         }); // end of document ready
     })(jQuery);
+</script>
+
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+    function onYouTubeIframeAPIReady() {
+        var player;
+        player = new YT.Player('muteYouTubeVideoPlayer', {
+            videoId: 'Fvob6L8q3I8',
+            width: 480,
+            height: 270,
+            playerVars: {
+                autoplay: 1,
+                modestbranding: 1,
+                loop: 1,
+                iv_load_policy: 3,
+                hl: "FR",
+                start: 40
+            },
+            events: {
+                onReady: function (e) {
+                    e.target.mute();
+                }
+            }
+        });
+    }
 </script>
 </body>
 </html>
