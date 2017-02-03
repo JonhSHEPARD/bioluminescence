@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
 
-    <!--Import Lato Font-->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -19,7 +17,7 @@
 </head>
 
 <body>
-<nav class="teal" role="navigation">
+<nav class="teal scrollspy" id="top" role="navigation">
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
             <li><a href="index.html">Accueil</a></li>
@@ -30,7 +28,7 @@
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -40,7 +38,7 @@
             <li><a href="dinoflagelles.html">Dinoflagellés</a></li>
             <li><a href="dev_durable.html">Développement Durable</a></li>
             <li><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i
                 class="material-icons">menu</i></a>
@@ -52,16 +50,19 @@
         <br>
 
         <div class="row">
-            <div class="section no-pad-bot scrollspy" id="top">
+            <div class="section no-pad-bot">
                 <h2 class="header center teal-text">Bioluminescence</h2>
+                <div class="row center">
+                    <h5 class="header col s12 teal-text text-lighten-3">Quelle est l'origine de la lumière de la vidéo de l'introduction ?</h5>
+                </div>
                 <div class="col s12">
                     <div class="col s6 left-align">
-                        <a href="introduction.html" class="btn teal">
+                        <a href="introduction.html" class="btn teal waves-effect waves-light">
                             <i class="fa fa-arrow-left"></i> Précedent
                         </a>
                     </div>
                     <div class="col s6 right-align">
-                        <a href="dinoflagelles.html" class="btn teal">
+                        <a href="dinoflagelles.html" class="btn teal waves-effect waves-light">
                             Suivant <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -78,6 +79,8 @@
                     <li><a href="#top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> Haut de page</a></li>
                     <br>
                     <li><a href="#bioluminescence">La bioluminescence</a></li>
+                    <li><a href="#produc_lum">Production de Lumière</a></li>
+                    <li><a href="#chimiluminescence">Chimiluminescence</a></li>
                 </ul>
             </div>
 
@@ -89,7 +92,7 @@
                         <br>
                         <p>
                             Le phénomène visible sur la photo ci-dessus est une lumière présente naturellement sur la
-                            Terre et s'appelle la bioluminescence.
+                            Terre et s'appelle la bioluminescence. (Source: BBC)
                         </p>
                     </div>
                 </div>
@@ -99,26 +102,25 @@
                 <!--   Icon Section   -->
                 <div class="col s12 m9 l10">
                     <div class="icon-block">
-                        <h2 class="center teal-text"><i class="material-icons">info_outline</i></h2>
                         <h5 class="center scrollspy" id="bioluminescence">La Bioluminescence</h5>
 
-                        <p class="light center">
+                        <p class="light">
+                            La bioluminescence est une production et émission de lumière provenant d'un être vivant.
+                            Cette lumière dite "froide" ne génère que très peu de chaleur (moins de 20%) et ne doit pas
+                            être confondue avec la fluorescence: émission de lumière par excitation d'une molécule puis
+                            émission spontanée d'un photon, ou encore avec la phosphorescence: absorbtion de lumière
+                            puis restitution plus ou moins lente de celle-ci.
+                        </p>
+                        <p class="light">
+                            Ci dessous une représentation des familles d'espèces vivantes bioluminescentes, à la fois
+                            marines et terrestres (Image produite par <a
+                                href="http://tabletopwhale.com/2014/07/21/a-visual-compendium-of-glowing-creatures.html"
+                                title="Site original" target="_blank">Eleanor Lutz</a>, cliquer sur l'image pour
+                            afficher en entier):
                         </p>
                     </div>
                 </div>
-            </div>
 
-            <div class="section row">
-                <div class="col s12 m9 l10">
-                    <br>
-                    <iframe id="iframe_container" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
-                            src="https://prezi.com/embed/cwl8zhsvl8p9/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI5bHhWZGptUkErWE00S3FhcUtFQ0hxQXZRPT0&amp;landing_sign=Tf8emb356dQ57XcXFix6P0FWL5_3kFbtGyHflUfo6wI"
-                            height="500" frameborder="0" width="100%"></iframe>
-                </div>
-            </div>
-
-
-            <div class="section row">
                 <div class="col s12 m9 l10">
                     <a href="#modal-tree-of-life" title="Arbre de la vie bioluminescente (réduit)">
                         <div class="col s12 black center">
@@ -127,6 +129,81 @@
                             <br>
                         </div>
                     </a>
+                </div>
+            </div>
+
+            <div class="section row">
+                <!--   Icon Section   -->
+                <div class="col s12 m9 l10">
+                    <div class="icon-block">
+                        <h5 class="center scrollspy" id="produc_lum">La Production de lumière</h5>
+                        <p class="light">
+                            La production de la bioluminescence résulte d'une réaction enzymatique, découverte par
+                            Raphaël Dubois et complétée par W.D McElroy, un substrat (Luciférine) se lie avec l'<a
+                                href="lexique.html#ATP" title="Lexique" target="_blank">ATP</a> lié à un ion magnésium:
+                            le complexe MgATP sert de support pour la Luciférase.
+                            <br>
+                            Puis la Luciférine va intéragir avec une enzyme (Luciférase) donnant la Luciférine
+                            adénylate. Une molécule d'oxygène vient se rajouter au complexe transformant celui-ci en
+                            Oxyluciférine. Cette molécule étant dans un état excité, retourne à l'état stable en
+                            émettant un photon et l'enzyme (Luciférase) se libère afin de catalyser une autre
+                            réaction.
+                        </p>
+                        <p class="light">
+                            Vous pouvez voir ci-dessous une animation Flash schématisant la réaction:
+                        </p>
+                    </div>
+
+                    <iframe id="iframe_container" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""
+                            src="https://prezi.com/embed/cwl8zhsvl8p9/?bgcolor=ffffff&amp;lock_to_path=1&amp;autoplay=0&amp;autohide_ctrls=0&amp;landing_data=bHVZZmNaNDBIWnNjdEVENDRhZDFNZGNIUE43MHdLNWpsdFJLb2ZHanI5bHhWZGptUkErWE00S3FhcUtFQ0hxQXZRPT0&amp;landing_sign=Tf8emb356dQ57XcXFix6P0FWL5_3kFbtGyHflUfo6wI"
+                            height="500" frameborder="0" width="100%" style="border: grey 1px dashed"></iframe>
+
+                    <div class="icon-block">
+                        <p class="light">
+                            Le spectre de la lumière émise par cette réaction possède un maximum de 560nm, cependant,
+                            les espèces marines utilisant la bioluminescence produisent généralement une lumière de
+                            spectre environnant les 470nm, longueur d'onde optimale pour la transmission de lumière dans
+                            un milieu aquatique et correspondant à la sensibilité maximale des pigments visuels de la
+                            plupart des organismes marins.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section row">
+                <!--   Icon Section   -->
+                <div class="col s12 m9 l10">
+                    <div class="icon-block">
+                        <h5 class="center scrollspy" id="chimiluminescence">La Chimiluminescence</h5>
+                        <p class="light">
+                            Nous avons recherchés à reproduire la bioluminescence en laboratoire, nous avons donc
+                            cherchés quelles méthodes permettaient de produire la lumière et nous avons trouvés la
+                            chimiluminescence. Cette production de lumière est liée à l'<a
+                                href="lexique.html#OxydoReduction" title="Lexique" target="_blank">oxydo-réduction</a>
+                            du luminol (produit chimique de formule brute
+                            C<sub>8</sub>H<sub>7</sub>N<sub>3</sub>O<sub>2</sub>) par de l'eau oxygénée (aussi appelé
+                            peroxyde d'hydrogène de formule brute H<sub>2</sub>O<sub>2</sub>) ou par quelconque
+                            hydroxyde.
+                        </p>
+                        <p class="light">
+                            L'équation chimique de la réaction de chimiluminescence est:
+                        </p>
+                        <p class="light center">
+                            2H<sub>2</sub>O<sub>2</sub> + C<sub>8</sub>H<sub>7</sub>N<sub>3</sub>O<sub>2</sub> → 2H<sub>2</sub>O
+                            + 2H<sup>+</sup> + C<sub>8</sub>H<sub>5</sub>NO<sub>4</sub><sup>2-</sup> + N<sub>2</sub>
+                        </p>
+                        <p class="light">
+                            Nous avons pu reproduire l'expérience dans le laboratoire de notre lycée, la vidéo de
+                            l'expérience est disponible ci-dessous et le protocole est disponible <a
+                                href="resources/docs/protocole_chimiluminescence.pdf" target="_blank">ici</a> :
+                        </p>
+                    </div>
+
+                    <div id="video" class="icon-block">
+                        <div class="video-container">
+                            <div id="muteYouTubeVideoPlayer"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -139,7 +216,8 @@
                      title="Arbre de la vie bioluminescente complet">
             </div>
             <div class="modal-footer">
-                <a href="#" class="modal-action modal-close waves-effect waves-red green btn-flat white-text">Fermer</a>
+                <a href="#"
+                   class="modal-action modal-close waves-effect waves-red green btn-flat white-text">Fermer</a>
                 <a href="resources/img/bioluminescent-tree-of-life-full.png" target="_blank"
                    class="waves-effect waves-green grey btn-flat white-text left">Afficher l'image entière</a>
             </div>
@@ -170,13 +248,36 @@
 <script type="text/javascript">
     (function ($) {
         $(function () {
-
             $('.button-collapse').sideNav();
             $('.parallax').parallax();
             $('.modal').modal();
             $('.scrollspy').scrollSpy();
         }); // end of document ready
     })(jQuery);
+</script>
+
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+    function onYouTubeIframeAPIReady() {
+        new YT.Player('muteYouTubeVideoPlayer', {
+            videoId: 'VIDEO_ID_A_METTRE_PLUS_TARD',
+            width: 480,
+            height: 270,
+            playerVars: {
+                autoplay: 1,
+                modestbranding: 1,
+                loop: 1,
+                iv_load_policy: 3,
+                hl: "FR",
+                start: 0
+            },
+            events: {
+                onReady: function (e) {
+                    e.target.mute();
+                }
+            }
+        });
+    }
 </script>
 </body>
 </html>

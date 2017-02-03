@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
 
-    <!--Import Lato Font-->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -19,7 +17,7 @@
 </head>
 
 <body>
-<nav class="teal" role="navigation">
+<nav class="teal scrollspy" id="top" role="navigation">
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
             <li><a href="index.html">Accueil</a></li>
@@ -30,7 +28,7 @@
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -40,7 +38,7 @@
             <li class="active"><a href="dinoflagelles.html">Dinoflagellés</a></li>
             <li><a href="dev_durable.html">Développement Durable</a></li>
             <li><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i
                 class="material-icons">menu</i></a>
@@ -52,16 +50,20 @@
         <br>
 
         <div class="row">
-            <div class="section no-pad-bot scrollspy" id="top">
+            <div class="section no-pad-bot">
                 <h2 class="center teal-text">Dinoflagellés</h2>
+                <div class="row center">
+                    <h5 class="header col s12 teal-text text-lighten-3">Quels sont les organismes émetteurs de cette
+                        lumière ?</h5>
+                </div>
                 <div class="col s12">
                     <div class="col s6 left-align">
-                        <a href="bioluminescence.html" class="btn teal">
+                        <a href="bioluminescence.html" class="btn teal waves-effect waves-light">
                             <i class="fa fa-arrow-left"></i> Précedent
                         </a>
                     </div>
                     <div class="col s6 right-align">
-                        <a href="dev_durable.html" class="btn teal">
+                        <a href="dev_durable.html" class="btn teal waves-effect waves-light">
                             Suivant <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -83,38 +85,55 @@
             </div>
 
             <div class="section">
+                <div class="row">
+                    <div class="col s12 m9 l10">
+                        <img src="http://i.imgur.com/9KaFlhV.jpg"
+                             width="100%">
+                        <br>
+                        <p>
+                            On voit sur cette plage des "points" lumineux émettant une lumière similaire à la
+                            bioluminescence, ce sont en réalité des dinoflagellés, des algues
+                            bioluminescentes. (Source: techeblog.com)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section row">
                 <!--   Icon Section   -->
                 <div class="col s12 m9 l10">
                     <div class="icon-block section">
-                        <h2 class="center teal-text"><i class="material-icons">assignment</i></h2>
                         <h5 class="center scrollspy" id="dinoglagelles">Dinoflagellés</h5>
+
+                        <br>
+                        <br>
 
                         <p class="light">
                             Les dinoflagellés (ou dinophytes) sont des micros algues unicellulaires de la famille des
                             Alvéolés (ou Alveolata). Ils disposent de deux flagelles qui leur permettent des
                             déplacements tournoyants. Certains dinoflagellés appelés « cuirassés » possèdent une <a
-                                href="https://www.aquaportail.com/definition-134-theque.html" target="_blank"
-                                title="Définition sur aquaportail.com">thèque</a> (capsule cellulaire de différents
-                            organismes servant de protection) composée de plaques rigides de cellulose. Actuellement, on
-                            dénombre environ 3000 espèces de
-                            dinophytes et on en découvre régulièrement de nouvelles. Ces algues produisent de la
-                            bioluminescence afin de se défendre à l'aide d'un "flash" lumineux face aux prédateurs.
+                                href="lexique.html#Theque" title="Lexique" target="_blank">thèque</a> composée de
+                            plaques rigides de cellulose. Actuellement, on dénombre environ 3000 espèces de dinophytes
+                            et on en découvre régulièrement de nouvelles. Ces algues produisent de la bioluminescence
+                            afin de se défendre à l'aide d'un "flash" lumineux face aux prédateurs.
                             <br>
                             <br>
                             Présents en nombre important des les régions tempérées et polaires, les dinoflagellés sont
                             malgré tout présent dans le monde entier et vivent isolés ou en colonies et dans des eaux
-                            marines ou saumâtres (eaux composées d'eau douce et d'eau de mer).
+                            marines ou <a href="lexique.html#Saumatres" title="Lexique" target="_blank">saumâtres</a>.
                             Ces algues se développent du printemps à l'automne mais apparaissent aujourd'hui toute
                             l'année. Ces algues se reproduisent par division cellulaire toutes les 12 à 36 heures. Les
                             dinoflagellés occupent une place importante de la base de la chaîne alimentaire marine.
                         </p>
 
-                        <div class="col s12 m8 offset-m2">
+                        <br>
+                        <br>
+
+                        <div class="col s12 m10 offset-m1 center">
                             <img class="z-depth-3" src="resources/img/chaine-alimentaire-marine.jpg" width="100%">
+                            <span>Schéma simplifié de la chaîne alimentaire marine (Source: phenomer.org)</span>
                         </div>
                     </div>
-                    <br>
-                    <br>
                 </div>
             </div>
             <div class="section">
@@ -125,17 +144,24 @@
                         <h5 class="center scrollspy" id="pyrocystis">Pyrocystis Fusiformis</h5>
 
                         <br>
+                        <br>
+                        <br>
 
                         <div class="col s12 m6">
-                            <img class="z-depth-3" src="resources/img/pyrocystis_fusiformis.png" width="90%">
+                            <div style="width: 90%">
+                                <img class="z-depth-3" src="resources/img/pyrocystis_fusiformis.png" width="100%">
+                                <span>Vue microscopique d'un Pyrocystis Fusiformis (Source: bioweb.uwlax.edu)</span>
+                                <br>
+                                <br>
+                            </div>
                         </div>
 
                         <p class="light">
-                            Les Pyrocystis Fusiformis sont une espèce de dinoflagellés qui évolue au sommet de la zone
-                            euphotique (zone océanique allant de 0 à 200m sous la surface) afin d'être plus exposée à la
-                            lumière afin de produire la photosynthèse. Ils évoluent particulièrement de 60m à 100m sous
-                            la surface où la luminosité est faible afin de favoriser l'utilisation de la
-                            bioluminescence.
+                            Les Pyrocystis Fusiformis sont une espèce de dinoflagellés qui évolue au sommet de la <a
+                                href="lexique.html#Zone_Euphotique" title="Lexique" target="_blank">zone
+                            euphotique</a> afin d'être plus exposée à la lumière afin de produire la photosynthèse. Ils
+                            évoluent particulièrement de 60m à 100m sous la surface où la luminosité est faible afin de
+                            favoriser l'utilisation de la bioluminescence.
                             <br>
                             Les Pyrocystis Fusiformis possèdent une particularité, ils possèdent un rythme cicardien. Le
                             rythme cicardien est un rythme biologique d'environ 24 heures contenant une phase d'éveil et
@@ -146,8 +172,15 @@
                             durant la journée par la photosynthèse sera utilisée pour produire la bioluminescence.
                         </p>
 
+                        <br>
+                        <br>
+
                         <div class="col s12 m12 center-align">
-                            <img class="z-depth-3" src="resources/img/cicardian-dino.png" width="80%">
+                            <div style="width: 80%; margin: auto">
+                                <img class="z-depth-3" src="resources/img/cicardian-dino.png" width="100%">
+                                <span>Niveau de bioluminescence en fonction de l'heure et des périodes jour/nuit (Source: biolum.eemb.ucsb.edu)</span>
+                            </div>
+                            <br>
                         </div>
 
                         <p class="light">

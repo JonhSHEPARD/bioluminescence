@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
 
-    <!--Import Lato Font-->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -30,7 +28,7 @@
         </ul>
         <ul class="right hide-on-med-and-down">
             <li class="active"><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -40,7 +38,7 @@
             <li><a href="dinoflagelles.html">Dinoflagellés</a></li>
             <li><a href="dev_durable.html">Développement Durable</a></li>
             <li class="active"><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i
                 class="material-icons">menu</i></a>
@@ -52,16 +50,16 @@
         <br>
 
         <div class="row">
-            <div class="section no-pad-bot scrollspy" id="top">
+            <div class="section no-pad-bot">
                 <h3 class="header center teal-text">Lexique</h3>
                 <div class="col s12">
                     <div class="col s6 left-align">
-                        <a href="dev_durable.html" class="btn teal">
+                        <a href="dev_durable.html" class="btn teal waves-effect waves-light">
                             <i class="fa fa-arrow-left"></i> Précedent
                         </a>
                     </div>
                     <div class="col s6 right-align">
-                        <a href="bibliographie.html" class="btn teal">
+                        <a href="bibliographie.html" class="btn teal waves-effect waves-light">
                             Suivant <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -73,9 +71,36 @@
         </div>
 
         <div class="row">
-            <div class="section">
-                <!--   Icon Section   -->
-                <div class="row">
+            <div class="section scrollspy" id="ATP">
+                <div class="row card-panel definition">
+                    <span class="bold underlined">ATP :</span> Abréviation d'Adénosine Triphosphate, c'est un nucléotide
+                    fournissant
+                    l'énergie nécessaire aux réactions chimiques du métabolisme, à la division cellulaire ou encore
+                    le déplacement d'espèce chimiques dans le métabolisme des êtres vivants.
+                </div>
+            </div>
+            <div class="section scrollspy" id="Zone_Euphotique">
+                <div class="row card-panel definition">
+                    <span class="bold underlined">Zone Euphotique :</span> Zone océanique allant de 0 à 200m sous la
+                    surface de l'eau.
+                </div>
+            </div>
+            <div class="section scrollspy" id="Saumatres">
+                <div class="row card-panel definition">
+                    <span class="bold underlined">Saumâtres :</span> Zones aquatiques composées d'eau douce et d'eau de
+                    mer.
+                </div>
+            </div>
+            <div class="section scrollspy" id="Theque">
+                <div class="row card-panel definition">
+                    <span class="bold underlined">Thèque :</span> Enveloppe formant une espèce de capsule cellulaire sur
+                    certains organismes unicellulaires servant de protection en agissant comme une armure.
+                </div>
+            </div>
+            <div class="section scrollspy" id="OxydoReduction">
+                <div class="row card-panel definition">
+                    <span class="bold underlined">Oxydo-Réduction :</span> Réaction chimiques ou une espèce appelée
+                    "oxydant" capte des électrons d'une espèce chimique appelée "réducteur".
                 </div>
             </div>
         </div>
@@ -105,10 +130,18 @@
 <script type="text/javascript">
     (function ($) {
         $(function () {
-
             $('.button-collapse').sideNav();
             $('.parallax').parallax();
             $('.modal').modal();
+
+            if (window.location.hash) {
+                var div = document.getElementById(window.location.hash.substr(1));
+
+                if (div != null) {
+                    div.children[0].classList.add("red");
+                    div.children[0].classList.add("lighten-4");
+                }
+            }
         }); // end of document ready
     })(jQuery);
 </script>

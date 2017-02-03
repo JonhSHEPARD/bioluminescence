@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
 
-    <!--Import Lato Font-->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -19,7 +17,7 @@
 </head>
 
 <body>
-<nav class="teal" role="navigation">
+<nav class="teal scrollspy" id="top" role="navigation">
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
             <li><a href="index.html">Accueil</a></li>
@@ -30,7 +28,7 @@
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
 
         <ul id="nav-mobile" class="side-nav">
@@ -40,7 +38,7 @@
             <li><a href="dinoflagelles.html">Dinoflagellés</a></li>
             <li><a href="dev_durable.html">Développement Durable</a></li>
             <li><a href="lexique.html">Lexique</a></li>
-            <li><a href="bibliographie.html">Bibliographie</a></li>
+            <li><a href="bibliographie.html">Sources</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i
                 class="material-icons">menu</i></a>
@@ -52,11 +50,11 @@
         <br>
 
         <div class="row">
-            <div class="section no-pad-bot scrollspy" id="top">
+            <div class="section no-pad-bot">
                 <h2 class="header center teal-text">Introduction</h2>
                 <div class="col s12">
                     <div class="col s6 offset-s6 right-align">
-                        <a href="bioluminescence.html" class="btn teal">
+                        <a href="bioluminescence.html" class="btn teal waves-effect waves-light">
                             Suivant <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -169,8 +167,7 @@
 <script async src="https://www.youtube.com/iframe_api"></script>
 <script>
     function onYouTubeIframeAPIReady() {
-        var player;
-        player = new YT.Player('muteYouTubeVideoPlayer', {
+        new YT.Player('muteYouTubeVideoPlayer', {
             videoId: 'Fvob6L8q3I8',
             width: 480,
             height: 270,
