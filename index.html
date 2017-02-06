@@ -17,7 +17,19 @@
 </head>
 
 <body>
-<nav class="teal" role="navigation">
+
+<div id="banner" class="vertical-align center" style="height: 100%; background-color: #191923;">
+    <br>
+    <br>
+    <h1 class="teal-text animated bounce" id="title">TPE Bioluminescence</h1>
+    <a href="" class="teal btn" id="banner-button">
+        <i class="fa fa-angle-double-down left" aria-hidden="true"></i>
+        Cliquez Ici
+        <i class="fa fa-angle-double-down right" aria-hidden="true"></i>
+    </a>
+</div>
+
+<nav class="teal" role="navigation" id="navbar">
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
             <li class="active"><a href="index.html">Accueil</a></li>
@@ -51,7 +63,7 @@
 
         <div class="row">
             <div class="section no-pad-bot">
-                <h2 class="header center teal-text">TPE Bioluminescence</h2>
+                <h2 class="header center teal-text" id="newtitle">TPE Bioluminescence</h2>
                 <div class="row center">
                     <h6 class="header col s12 teal-text text-lighten-3">TPE Première S au Lycée Fénelon</h6>
                 </div>
@@ -64,14 +76,14 @@
                 <!--   Icon Section   -->
                 <div class="row">
                     <div class="col s12">
-                        <div class="icon-block">
+                        <div class="icon-block scrollspy" id="start">
                             <h5>Bienvenue,</h5>
 
                             <p class="bold">
                                 Sur le site de notre projet de T.P.E. sur la bioluminescence.
                                 <br>
                                 <br>
-                                Ce site a été entièrement produit par nous-même durant les 2 premiers semestres de
+                                Ce site a été entièrement produit par nous-même durant les 2 premiers trimestres de
                                 l'année 2016-2017 et le code source du site est disponible à cette adresse: <a
                                     href="https://github.com/JonhSHEPARD/bioluminescence"
                                     target="_blank" title="Bioluminescence sur Github.com">https://github.com/JonhSHEPARD/bioluminescence</a>
@@ -133,6 +145,42 @@
 <script type="text/javascript">
     (function ($) {
         $(function () {
+            resize();
+            window.onresize = resize();
+
+            $.fn.extend({
+                animateCss: function (animationName) {
+                    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                    this.addClass('animated ' + animationName).one(animationEnd, function() {
+                        $(this).removeClass('animated ' + animationName);
+                    });
+                }
+            });
+
+            function resize() {
+                var navbar = $("#navbar");
+                $('#banner').height($(window).height());
+                document.getElementById("banner-button").style.marginTop = ($(window).height() - (2 * $("br").height()) - $("#title").height() - 50) + "px";
+            }
+
+            var colors = ["#ee4035", "#f37736", "#7bc043", "#0392cf", "#0099ff", "#87cefa", "#9999ff", "#ff99ff"];
+            var banner_button = $('#banner-button');
+
+            setInterval(function () {
+                var i = Math.floor(Math.random() * colors.length);
+                banner_button.removeClass("teal");
+                banner_button.css("background-color", colors[i]);
+            }, 1500);
+
+            banner_button.click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#navbar").offset().top
+                }, 700, function () {
+                    $('#newtitle').animateCss('flash');
+                });
+
+                return false;
+            });
 
             $('.button-collapse').sideNav();
             $('.parallax').parallax();
