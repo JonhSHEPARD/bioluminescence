@@ -110,10 +110,15 @@ footer.page-footer {
 	background-image: url('http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_720/images/live/p0/21/4w/p0214w03.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
+    background-size: 100%;
 	background-color: #191923;
 }
 
 #title {
     margin: 0;
     background-color: #191923;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
 }

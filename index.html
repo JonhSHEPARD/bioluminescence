@@ -34,8 +34,11 @@
         <ul class="left hide-on-med-and-down">
             <li class="active"><a href="index.html">Accueil</a></li>
             <li><a href="introduction.html">Introduction</a></li>
-            <li><a href="bioluminescence.html">Bioluminescence</a></li>
-            <li><a href="dinoflagelles.html">Dinoflagellés</a></li>
+            <li><a href="bioluminescence.html"
+                   title="Quelle est l'origine de la lumière présente dans la vidéo de l'introduction ?">La lumière</a>
+            </li>
+            <li><a href="dinoflagelles.html"
+                   title="Quels sont les organismes émetteurs de cette lumière ?">Organismes</a></li>
             <li><a href="dev_durable.html">Développement Durable</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
@@ -46,8 +49,8 @@
         <ul id="nav-mobile" class="side-nav">
             <li class="active"><a href="index.html">Accueil</a></li>
             <li><a href="introduction.html">Introduction</a></li>
-            <li><a href="bioluminescence.html">Bioluminescence</a></li>
-            <li><a href="dinoflagelles.html">Dinoflagellés</a></li>
+            <li><a href="bioluminescence.html">La lumière</a></li>
+            <li><a href="dinoflagelles.html">Organismes</a></li>
             <li><a href="dev_durable.html">Développement Durable</a></li>
             <li><a href="lexique.html">Lexique</a></li>
             <li><a href="bibliographie.html">Sources</a></li>
@@ -84,35 +87,44 @@
                                 <br>
                                 <br>
                                 Ce site a été entièrement produit par nous-même durant les 2 premiers trimestres de
-                                l'année 2016-2017 et le code source du site est disponible à cette adresse: <a
+                                l'année 2016-2017 (Code source du site si intéressé: <a
                                     href="https://github.com/JonhSHEPARD/bioluminescence"
-                                    target="_blank" title="Bioluminescence sur Github.com">https://github.com/JonhSHEPARD/bioluminescence</a>
+                                    target="_blank" title="Bioluminescence sur Github.com">Lien externe</a>)
                                 <br>
                                 <br>
                                 Notre T.P.E. "La Bioluminescence" s'inscrit dans le Thème National "Matière et forme".
                                 <br>
                                 <br>
-                                La navigation sur le site se fait grâce à la barre de navigation située en haut du site,
-                                cependant vous pouvez également commencer la navigation à l'aide du bouton ci-dessous
-                                puis ensuite cliquer sur les flèches directionnelles situées en dessous de chaque titre
-                                de page. Bonne visite sur notre site !
-                                <br>
-                                <br>
-                                <u>Information pour la navigation:</u>
+                                La navigation sur le site se fait grâce à la barre de navigation située sur le haut du
+                                site, cependant vous pouvez également commencer la navigation à l'aide du bouton
+                                ci-dessous puis ensuite cliquer sur les flèches directionnelles situées en-dessous de
+                                chaque titre de page. Bonne visite sur notre site !
                             </p>
-                            <ul class="browser-default">
-                                <li>
-                                    Les mots en bleu et soulignés sont des liens accédant aux sources/définition du/des
-                                    termes, il faut simplement cliquer dessus.
-                                </li>
-                                <li>
-                                    Vous devez posséder Adobe Flash Player afin d'avoir la meilleure navigation possible
-                                    du site (la version la plus récente possible)
-                                </li>
-                            </ul>
+
+                            <br>
+
+                            <div style="border: 4px yellow dashed;">
+                                <p class="bold" style="padding-left: 10px">
+                                    <u>Information pour la navigation:</u>
+                                </p>
+                                <ul class="browser-default">
+                                    <li>
+                                        Les mots en bleu et soulignés sont des liens accédant aux sources/définition
+                                        du/des termes, il faut simplement cliquer dessus.
+                                    </li>
+                                    <li>
+                                        Vous devez posséder Adobe Flash Player afin d'avoir la meilleure navigation
+                                        possible du site (la version la plus récente possible)
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <br>
+                            <br>
 
                             <a class="right btn teal waves-effect waves-light" href="introduction.html">
                                 Démarrer la visite
+                                <i class="fa fa-play-circle right" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
@@ -121,6 +133,8 @@
         </div>
     </div>
 
+    <br>
+    <br>
     <br>
     <br>
 
@@ -151,11 +165,13 @@
             $.fn.extend({
                 animateCss: function (animationName) {
                     var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-                    this.addClass('animated ' + animationName).one(animationEnd, function() {
+                    this.addClass('animated ' + animationName).one(animationEnd, function () {
                         $(this).removeClass('animated ' + animationName);
                     });
                 }
             });
+
+            var old_height = $(window).height();
 
             function resize() {
                 var navbar = $("#navbar");
@@ -170,6 +186,11 @@
                 var i = Math.floor(Math.random() * colors.length);
                 banner_button.removeClass("teal");
                 banner_button.css("background-color", colors[i]);
+
+                if (old_height != $(window).height()) {
+                    resize();
+                    old_height = $(window).height();
+                }
             }, 1500);
 
             banner_button.click(function () {
