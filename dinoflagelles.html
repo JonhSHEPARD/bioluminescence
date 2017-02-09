@@ -27,7 +27,9 @@
             </li>
             <li class="active"><a href="dinoflagelles.html"
                                   title="Quels sont les organismes émetteurs de cette lumière ?">Organismes</a></li>
-            <li><a href="dev_durable.html">Développement Durable</a></li>
+            <li><a href="dev_durable.html"
+                   title="Comment utiliser cette lumière dans un but de développement durable ?">Écologie</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
             <li><a href="lexique.html">Lexique</a></li>
@@ -39,7 +41,8 @@
             <li><a href="introduction.html">Introduction</a></li>
             <li><a href="bioluminescence.html">La lumière</a></li>
             <li class="active"><a href="dinoflagelles.html">Organismes</a></li>
-            <li><a href="dev_durable.html">Développement Durable</a></li>
+            <li><a href="dev_durable.html">Écologie</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
             <li><a href="lexique.html">Lexique</a></li>
             <li><a href="bibliographie.html">Sources</a></li>
         </ul>
@@ -67,7 +70,8 @@
                         </a>
                     </div>
                     <div class="col s6 right-align">
-                        <a href="dev_durable.html" class="btn teal waves-effect waves-light">
+                        <a href="dev_durable.html" class="btn teal waves-effect waves-light"
+                           title="Comment utiliser cette lumière dans un but de développement durable ?">
                             Suivant <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -179,7 +183,7 @@
                         <div class="col s12 m6">
                             <div style="width: 90%">
                                 <img class="z-depth-3" src="resources/img/pyrocystis_fusiformis.png" width="100%">
-                                <span>Vue microscopique d'un Pyrocystis Fusiformis (Source: bioweb.uwlax.edu)</span>
+                                <span>Vue microscopique d'un Pyrocystis Fusiformis, prise de vue faite à l'aide d'une méthode appelée excitation à deux photons (Source: biolum.eemb.ucsb.edu)</span>
                                 <br>
                                 <br>
                             </div>
@@ -220,7 +224,20 @@
                             effet, il est inutile d'émettre la bioluminescence en journée à leur profondeur de vie étant
                             donné qu'il y a déjà de la lumière présente. Cela montre par ailleurs que ces algues
                             possèdent malgré tout un rythme biologique réglé en fonction du jour et de la nuit.
+                            <br>
+                            <br>
+                            La vidéo disponible ci-dessous permet de comprendre correctement l'idée des rythmes
+                            cicardiens, elle a été produite par le Laboratoire de l'Ecologie et de l'Evolution des
+                            plantes de l'Université de Vigo (Espagne). Cette vidéo possède du son et est en anglais :
                         </p>
+
+                        <br>
+
+                        <div id="video" class="icon-block row col s12">
+                            <div class="video-container">
+                                <div id="videoPlayer"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -258,6 +275,26 @@
             $('.scrollspy').scrollSpy();
         }); // end of document ready
     })(jQuery);
+</script>
+
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script>
+    function onYouTubeIframeAPIReady() {
+        new YT.Player('videoPlayer', {
+            videoId: 'vimS0ehuSYA',
+            width: 480,
+            height: 270,
+            playerVars: {
+                autoplay: 0,
+                modestbranding: 1,
+                loop: 1,
+                iv_load_policy: 3,
+                hl: "FR",
+                start: 33,
+                end: 225
+            }
+        });
+    }
 </script>
 </body>
 </html>

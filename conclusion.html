@@ -13,11 +13,11 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>TPE - Bibliographie</title>
+    <title>TPE - Bioluminescence</title>
 </head>
 
 <body>
-<nav class="teal" role="navigation">
+<nav class="teal scrollspy" id="top" role="navigation">
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
             <li><a href="index.html">Accueil</a></li>
@@ -28,11 +28,12 @@
             <li><a href="dinoflagelles.html"
                    title="Quels sont les organismes émetteurs de cette lumière ?">Organismes</a></li>
             <li><a href="dev_durable.html"
-                   title="Comment utiliser cette lumière dans un but de développement durable ?">Écologie</a></li>
-            <li><a href="conclusion.html">Conclusion</a></li>
+                   title="Comment utiliser cette lumière dans un but de développement durable ?">Écologie</a>
+            </li>
+            <li class="active"><a href="conclusion.html">Conclusion</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li class="active"><a href="lexique.html">Lexique</a></li>
+            <li><a href="lexique.html">Lexique</a></li>
             <li><a href="bibliographie.html">Sources</a></li>
         </ul>
 
@@ -42,30 +43,31 @@
             <li><a href="bioluminescence.html">La lumière</a></li>
             <li><a href="dinoflagelles.html">Organismes</a></li>
             <li><a href="dev_durable.html">Écologie</a></li>
-            <li><a href="conclusion.html">Conclusion</a></li>
-            <li class="active"><a href="lexique.html">Lexique</a></li>
+            <li class="active"><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="lexique.html">Lexique</a></li>
             <li><a href="bibliographie.html">Sources</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i
                 class="material-icons">menu</i></a>
     </div>
 </nav>
-
 <main>
     <div class="container">
         <br>
 
         <div class="row">
             <div class="section no-pad-bot">
-                <h3 class="header center teal-text">Lexique</h3>
+                <h2 class="header center teal-text">Conclusion</h2>
+                <br>
                 <div class="col s12">
                     <div class="col s6 left-align">
-                        <a href="conclusion.html" class="btn teal waves-effect waves-light">
+                        <a href="dev_durable.html" class="btn teal waves-effect waves-light"
+                           title="Comment utiliser cette lumière dans un but de développement durable ?">
                             <i class="fa fa-arrow-left"></i> Précedent
                         </a>
                     </div>
                     <div class="col s6 right-align">
-                        <a href="bibliographie.html" class="btn teal waves-effect waves-light">
+                        <a href="lexique.html" class="btn teal waves-effect waves-light">
                             Suivant <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
@@ -77,44 +79,31 @@
         </div>
 
         <div class="row">
-            <div class="section scrollspy" id="ATP">
-                <div class="row card-panel definition">
-                    <span class="bold underlined">ATP (Adénosine Triphosphate):</span> C'est un nucléotide
-                    fournissant l'énergie nécessaire aux réactions chimiques du métabolisme, à la division cellulaire ou
-                    encore
-                    le déplacement d'espèce chimiques dans le métabolisme des êtres vivants.
-                </div>
-            </div>
-            <div class="section scrollspy" id="Zone_Euphotique">
-                <div class="row card-panel definition">
-                    <span class="bold underlined">Zone Euphotique :</span> Zone océanique allant de 0 à 200m sous la
-                    surface de l'eau.
-                </div>
-            </div>
-            <div class="section scrollspy" id="Saumatres">
-                <div class="row card-panel definition">
-                    <span class="bold underlined">Saumâtres :</span> Zones aquatiques composées d'eau douce et d'eau de
-                    mer.
-                </div>
-            </div>
-            <div class="section scrollspy" id="Theque">
-                <div class="row card-panel definition">
-                    <span class="bold underlined">Thèque :</span> Enveloppe formant une espèce de capsule cellulaire sur
-                    certains organismes unicellulaires servant de protection en agissant comme une armure.
-                </div>
-            </div>
-            <div class="section scrollspy" id="OxydoReduction">
-                <div class="row card-panel definition">
-                    <span class="bold underlined">Oxydo-Réduction :</span> Réaction chimiques ou une espèce appelée
-                    "oxydant" capte des électrons d'une espèce chimique appelée "réducteur".
+            <div class="section">
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="icon-block">
+                        <p class="light">
+                            A travers notre T.P.E., nous avons pu découvrir de nouvelles formes de lumières naturelles
+                            et nous avons pu identifier l'origine de celles-ci mais nous avons également pu trouver un
+                            moyen de réutiliser cette lumière dans un but écologique.
+                            <br>
+                            <br>
+                            Ce T.P.E. nous confirme qu'il est possible d'utiliser ce que nous offre la nature pour nos
+                            besoins, nous avons pu réduire une consommation électrique en mettant en avant une espèce
+                            vivante qui était considérée jusque là comme envahissante.
+                            <br>
+                            <br>
+                            Cependant l'utilisation de cette forme de lumière n'a pas que des points positifs, en effet,
+                            cette lumière n'est pas très forte et peut-on s'en accomoder pour un usage courant en
+                            sachant que des start-ups telles que Glowee cherchent des solutions afin de les intégrer le
+                            plus possible au milieu urbain.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <br>
-        <br>
     </div>
-
 </main>
 
 <footer class="page-footer teal">
@@ -136,18 +125,11 @@
 <script type="text/javascript">
     (function ($) {
         $(function () {
+
             $('.button-collapse').sideNav();
             $('.parallax').parallax();
             $('.modal').modal();
-
-            if (window.location.hash) {
-                var div = document.getElementById(window.location.hash.substr(1));
-
-                if (div != null) {
-                    div.children[0].classList.add("red");
-                    div.children[0].classList.add("lighten-4");
-                }
-            }
+            $('.scrollspy').scrollSpy();
         }); // end of document ready
     })(jQuery);
 </script>
